@@ -14,15 +14,6 @@ namespace Moegirlpedia
     /// </summary>
     class SettingManager
     {
-        ApplicationDataContainer roamingSettings = null;
-        ApplicationDataContainer localSettings = null;
-
-        public SettingManager()
-        {
-            roamingSettings = ApplicationData.Current.RoamingSettings;
-            localSettings = ApplicationData.Current.LocalSettings;
-        }
-
         /// <summary>
         /// Set a setting. If the setting does not exsit, create a new setting.
         /// 
@@ -32,12 +23,12 @@ namespace Moegirlpedia
         /// <param name="key">Key of the setting</param>
         /// <param name="value">Value of the setting</param>
         /// <param name="local">False if is local setting, or true if to be roamed</param>
-        public void SetSetting(string key, Object value, bool local = false)
+        static public void SetSetting(string key, Object value, bool local = false)
         {
             if (local)
-                localSettings.Values[key] = value;
+                ApplicationData.Current.LocalSettings.Values[key] = value;
             else
-                roamingSettings.Values[key] = value;
+                ApplicationData.Current.RoamingSettings.Values[key] = value;
         }
 
         /// <summary>
@@ -46,12 +37,12 @@ namespace Moegirlpedia
         /// <param name="key">Key of the setting</param>
         /// <param name="local">False if is local setting, or true if to be roamed</param>
         /// <returns>Value of the setting</returns>
-        public Object GetSetting(string key, bool local = false)
+        static public Object GetSetting(string key, bool local = false)
         {
             if (local)
-                return localSettings.Values[key];
+                return ApplicationData.Current.LocalSettings.Values[key];
             else
-                return roamingSettings.Values[key];
+                return ApplicationData.Current.RoamingSettings.Values[key];
         }
 
         /// <summary>
@@ -59,24 +50,24 @@ namespace Moegirlpedia
         /// </summary>
         /// <param name="key">Key of the setting to be deleted</param>
         /// <param name="local">False if is local setting, or true if to be roamed</param>
-        public void DelSetting(string key, bool local = false)
+        static public void DelSetting(string key, bool local = false)
         {
             if (local)
-                localSettings.Values.Remove(key);
+                ApplicationData.Current.LocalSettings.Values.Remove(key);
             else
-                roamingSettings.Values.Remove(key);
+                ApplicationData.Current.RoamingSettings.Values.Remove(key);
         }
 
         /// <summary>
         /// Delete all exsiting settings
         /// </summary>
         /// <param name="local">True if delete local settings, false to delete roaming settings</param>
-        public void ClearSetting(bool local = false)
+        static public void ClearSetting(bool local = false)
         {
             if (local)
-                localSettings.Values.Clear();
+                ApplicationData.Current.LocalSettings.Values.Clear();
             else
-                roamingSettings.Values.Clear();
+                ApplicationData.Current.RoamingSettings.Values.Clear();
         }
     }
 }
