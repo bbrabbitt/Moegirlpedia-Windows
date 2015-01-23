@@ -3,8 +3,8 @@
   <Identity Name="1b9c309e-3cd4-484c-969b-9a8d1eccb1a5" Publisher="CN=Afa" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="1b9c309e-3cd4-484c-969b-9a8d1eccb1a5" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Moegirlpedia.WindowsPhone</DisplayName>
-    <PublisherDisplayName>Afa</PublisherDisplayName>
+    <DisplayName>ms-resource:Moegirlpedia</DisplayName>
+    <PublisherDisplayName>ms-resource:appAuthor</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>

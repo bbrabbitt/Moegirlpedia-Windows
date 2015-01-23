@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.ApplicationSettings;
 using Moegirlpedia.Data;
 using Moegirlpedia.Common;
 
@@ -26,6 +27,7 @@ namespace Moegirlpedia
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private Windows.ApplicationModel.Resources.ResourceLoader resourceLoader = new Windows.ApplicationModel.Resources.ResourceLoader();
 
         /// <summary>
         /// Gets the NavigationHelper used to aid in navigation and process lifetime management.
@@ -48,6 +50,8 @@ namespace Moegirlpedia
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
+            SettingsPane.GetForCurrentView().CommandsRequested += HubPage_CommandsRequested;    
+            // Add event handler only. No need to remove this handler since this is App wide setting
         }
 
         /// <summary>
@@ -114,6 +118,19 @@ namespace Moegirlpedia
             this.navigationHelper.OnNavigatedFrom(e);
         }
 
+        #endregion
+
+        #region Settings for Charm
+        private void HubPage_CommandsRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
+        {
+            SettingsCommand preferenceSettings = new SettingsCommand("settingsPref", resourceLoader.GetString("Settings"),
+                (handler) =>
+                {
+                    SettingsFlyoutPreferences sfPref = new SettingsFlyoutPreferences();
+                    sfPref.Show();
+                });
+            args.Request.ApplicationCommands.Add(preferenceSettings);
+        }
         #endregion
     }
 }
