@@ -23,6 +23,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Preferences.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SettingManager.cs" />
     <Content Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />

@@ -7,14 +7,25 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     IconSource="Assets/SmallLogo.png"
-    Title="SettingsFlyoutPreferences"
+    x:Uid="SettingsPreferences"
+    Title="*Preferences"
     d:DesignWidth="346">
+
 
     <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
     <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
 
-        <!-- The StackPanel(s) below define individual content sections -->
+        <!-- Wiki Language -->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+            <TextBlock x:Uid="SettingsPreferences-WikiLanguage-Title" Text="*Wiki Language" Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBlock x:Uid="SettingsPreferences-WikiLanguage-Description" Text="*Choose the language of wiki" Style="{StaticResource BodyTextBlockStyle}"/>
+            <ComboBox Margin="0,7,0,0" SelectedIndex="0" HorizontalAlignment="Left" 
+                      ItemsSource="{Binding WikiLanguageList, Source={StaticResource SettingsPreference}}" 
+                      SelectedItem="{Binding WikiLanguage, Converter={StaticResource ConvterCommonLangNameISO639}, Mode=TwoWay, Source={StaticResource SettingsPreference}}" 
+            />
+        </StackPanel>
 
+        <!-- Define more Content Sections below as necessary -->
         <!-- Content Section 1-->
         <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
 
@@ -30,8 +41,5 @@
             </TextBlock>
 
         </StackPanel>
-
-        <!-- Define more Content Sections below as necessary -->
-
     </StackPanel>
 </SettingsFlyout>

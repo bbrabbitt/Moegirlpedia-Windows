@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
-
 using Windows.Storage;
 
 namespace Moegirlpedia
@@ -25,6 +25,7 @@ namespace Moegirlpedia
         /// <param name="local">False if is local setting, or true if to be roamed</param>
         static public void SetSetting(string key, Object value, bool local = false)
         {
+            Debug.WriteLine(String.Format("Setting: Set {0} as {1}, {2}", key, value, local ? "local storage" : "roaming"));
             if (local)
                 ApplicationData.Current.LocalSettings.Values[key] = value;
             else
@@ -39,10 +40,13 @@ namespace Moegirlpedia
         /// <returns>Value of the setting</returns>
         static public Object GetSetting(string key, bool local = false)
         {
+            Object value = null;
             if (local)
-                return ApplicationData.Current.LocalSettings.Values[key];
+                value = ApplicationData.Current.LocalSettings.Values[key];
             else
-                return ApplicationData.Current.RoamingSettings.Values[key];
+                value = ApplicationData.Current.RoamingSettings.Values[key];
+            Debug.WriteLine(String.Format("Setting: Get {0}, value is {1}, {2}", key, value, local ? "local storage" : "roaming"));
+            return value;
         }
 
         /// <summary>
@@ -52,6 +56,7 @@ namespace Moegirlpedia
         /// <param name="local">False if is local setting, or true if to be roamed</param>
         static public void DelSetting(string key, bool local = false)
         {
+            Debug.WriteLine(String.Format("Setting: Delete {0} setting, {2}", key, local ? "local storage" : "roaming"));
             if (local)
                 ApplicationData.Current.LocalSettings.Values.Remove(key);
             else
@@ -64,6 +69,7 @@ namespace Moegirlpedia
         /// <param name="local">True if delete local settings, false to delete roaming settings</param>
         static public void ClearSetting(bool local = false)
         {
+            Debug.WriteLine("Setting: Delete all " + (local ? "local" : "roaming") + " settings");
             if (local)
                 ApplicationData.Current.LocalSettings.Values.Clear();
             else

@@ -123,7 +123,7 @@ namespace Moegirlpedia
         #region Settings for Charm
         private void HubPage_CommandsRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
         {
-            SettingsCommand preferenceSettings = new SettingsCommand("settingsPref", resourceLoader.GetString("Settings"),
+            SettingsCommand preferenceSettings = new SettingsCommand("settingsPref", resourceLoader.GetString("Preferences"),
                 (handler) =>
                 {
                     SettingsFlyoutPreferences sfPref = new SettingsFlyoutPreferences();
