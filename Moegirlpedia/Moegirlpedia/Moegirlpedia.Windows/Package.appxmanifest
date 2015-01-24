@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="9183e26f-1424-47d9-95f1-eb0edb96719a" Publisher="CN=Afa" Version="1.0.0.0" />
+  <Identity Name="1b9c309e-3cd4-484c-969b-9a8d1eccb1a5" Publisher="CN=Afa" Version="1.0.0.0" />
   <Properties>
     <DisplayName>ms-resource:Moegirlpedia</DisplayName>
     <PublisherDisplayName>ms-resource:appAuthor</PublisherDisplayName>
