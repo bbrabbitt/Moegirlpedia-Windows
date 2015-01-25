@@ -16,8 +16,6 @@ using Windows.UI.ApplicationSettings;
 using Moegirlpedia.Data;
 using Moegirlpedia.Common;
 
-// The Universal Hub Application project template is documented at http://go.microsoft.com/fwlink/?LinkID=391955
-
 namespace Moegirlpedia
 {
     /// <summary>

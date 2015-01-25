@@ -129,6 +129,12 @@
     <value>Settings</value>
     <comment>Word ``Settings''</comment>
   </data>
+  <data name="ApplicationName.Text" xml:space="preserve">
+    <value>Moegirlpedia</value>
+  </data>
+  <data name="appName" xml:space="preserve">
+    <value>Moegirlpedia</value>
+  </data>
   <data name="Hub.Header" xml:space="preserve">
     <value>Moegirlpedia</value>
   </data>
@@ -137,7 +143,7 @@
     <comment>Word ``Preferences''</comment>
   </data>
   <data name="SettingsPreferences-WikiLanguage-Description.Text" xml:space="preserve">
-    <value>Choose the language of the wiki:</value>
+    <value>Choose the language of the wiki</value>
   </data>
   <data name="SettingsPreferences-WikiLanguage-Title.Text" xml:space="preserve">
     <value>Wiki Language</value>
@@ -145,5 +151,12 @@
   <data name="SettingsPreferences.Title" xml:space="preserve">
     <value>Preferences</value>
     <comment>Title of SettingPreferences Flyout</comment>
+  </data>
+  <data name="SettingsTitle.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsPreferences-Phone.Text" xml:space="preserve">
+    <value>Preferences</value>
+    <comment>Same as SettingsPreferences.Title</comment>
   </data>
 </root>

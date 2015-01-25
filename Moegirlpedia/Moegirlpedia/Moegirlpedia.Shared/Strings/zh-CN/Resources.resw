@@ -129,10 +129,28 @@
   <data name="Settings" xml:space="preserve">
     <value>设置</value>
   </data>
+  <data name="ApplicationName.Text" xml:space="preserve">
+    <value>萌娘百科</value>
+  </data>
+  <data name="appName" xml:space="preserve">
+    <value>萌娘百科</value>
+  </data>
   <data name="Preferences" xml:space="preserve">
     <value />
   </data>
+  <data name="SettingsPreferences-WikiLanguage-Description.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SettingsPreferences-WikiLanguage-Title.Text" xml:space="preserve">
+    <value />
+  </data>
   <data name="SettingsPreferences.Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SettingsTitle.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SettingsPreferences-Phone.Text" xml:space="preserve">
     <value />
   </data>
 </root>
