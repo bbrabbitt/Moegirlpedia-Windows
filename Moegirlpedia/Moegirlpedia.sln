@@ -8,36 +8,32 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Moegirlpedia.Shared", "Moegirlpedia\Moegirlpedia.Shared\Moegirlpedia.Shared.shproj", "{DDFA8ECF-2504-487D-86FB-4C0AC10305F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moegirlpedia.Windows", "Moegirlpedia\Moegirlpedia.Windows\Moegirlpedia.Windows.csproj", "{D0D67D0A-D283-45BF-ADA5-4A935B3D1FD8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A} = {AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moegirlpedia.WindowsPhone", "Moegirlpedia\Moegirlpedia.WindowsPhone\Moegirlpedia.WindowsPhone.csproj", "{63163D68-C728-4E57-B35B-AE12FA79CA73}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A} = {AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C6745E1-6FCB-4495-98E9-2EF355F6AF6A}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moegirlpedia.WikitextHelper", "Moegirlpedia.WikitextHelper\Moegirlpedia.WikitextHelper.csproj", "{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestWikitextHelper", "UnitTestWikitextHelper\UnitTestWikitextHelper.csproj", "{8C1A3712-1C6B-4393-AF1B-850D200A37B8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A} = {AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Moegirlpedia\Moegirlpedia.Shared\Moegirlpedia.Shared.projitems*{ddfa8ecf-2504-487d-86fb-4c0ac10305f4}*SharedItemsImports = 13
 		Moegirlpedia\Moegirlpedia.Shared\Moegirlpedia.Shared.projitems*{63163d68-c728-4e57-b35b-ae12fa79ca73}*SharedItemsImports = 4
 		Moegirlpedia\Moegirlpedia.Shared\Moegirlpedia.Shared.projitems*{d0d67d0a-d283-45bf-ada5-4a935b3d1fd8}*SharedItemsImports = 4
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs22
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Moegirlpedia\\Moegirlpedia.Shared\\Moegirlpedia.Shared.projitems
-		SccProjectTopLevelParentUniqueName1 = Moegirlpedia.sln
-		SccProjectName1 = Moegirlpedia/Moegirlpedia.Shared
-		SccLocalPath1 = Moegirlpedia\\Moegirlpedia.Shared
-		SccProjectUniqueName2 = Moegirlpedia\\Moegirlpedia.Shared\\Moegirlpedia.Shared.shproj
-		SccProjectTopLevelParentUniqueName2 = Moegirlpedia.sln
-		SccProjectName2 = Moegirlpedia/Moegirlpedia.Shared
-		SccLocalPath2 = Moegirlpedia\\Moegirlpedia.Shared
-		SccProjectUniqueName3 = Moegirlpedia\\Moegirlpedia.Windows\\Moegirlpedia.Windows.csproj
-		SccProjectTopLevelParentUniqueName3 = Moegirlpedia.sln
-		SccProjectName3 = Moegirlpedia/Moegirlpedia.Windows
-		SccLocalPath3 = Moegirlpedia\\Moegirlpedia.Windows
-		SccProjectUniqueName4 = Moegirlpedia\\Moegirlpedia.WindowsPhone\\Moegirlpedia.WindowsPhone.csproj
-		SccProjectTopLevelParentUniqueName4 = Moegirlpedia.sln
-		SccProjectName4 = Moegirlpedia/Moegirlpedia.WindowsPhone
-		SccLocalPath4 = Moegirlpedia\\Moegirlpedia.WindowsPhone
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +90,26 @@ Global
 		{63163D68-C728-4E57-B35B-AE12FA79CA73}.Release|x86.ActiveCfg = Release|x86
 		{63163D68-C728-4E57-B35B-AE12FA79CA73}.Release|x86.Build.0 = Release|x86
 		{63163D68-C728-4E57-B35B-AE12FA79CA73}.Release|x86.Deploy.0 = Release|x86
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Release|ARM.ActiveCfg = Release|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Release|x64.ActiveCfg = Release|Any CPU
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Release|x64.ActiveCfg = Release|Any CPU
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +118,7 @@ Global
 		{DDFA8ECF-2504-487D-86FB-4C0AC10305F4} = {FD8280C0-9316-4913-9B48-89C3638578C4}
 		{D0D67D0A-D283-45BF-ADA5-4A935B3D1FD8} = {FD8280C0-9316-4913-9B48-89C3638578C4}
 		{63163D68-C728-4E57-B35B-AE12FA79CA73} = {FD8280C0-9316-4913-9B48-89C3638578C4}
+		{AC6ADB59-101A-41DA-9C1D-69A0512B4B3A} = {FD8280C0-9316-4913-9B48-89C3638578C4}
+		{8C1A3712-1C6B-4393-AF1B-850D200A37B8} = {FD8280C0-9316-4913-9B48-89C3638578C4}
 	EndGlobalSection
 EndGlobal

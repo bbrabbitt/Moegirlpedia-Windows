@@ -171,7 +171,9 @@
     
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:Name="buttonSetting" Label="Settings" Icon="Setting" Click="buttonSetting_Click" />
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="buttonSetting" Label="Settings" Icon="Setting" Click="buttonSetting_Click" />
+            </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
 </Page>
