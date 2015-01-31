@@ -1,2 +1,0 @@
-﻿heimu:                  //span[@class='heimu']                  ;
-contents between h2     //

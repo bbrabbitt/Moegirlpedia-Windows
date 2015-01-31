@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Data;
 
 namespace Moegirlpedia
 {
-    class Preferences
+    internal class Preferences
     {
         // 'Cuz that annoying converter returns an object, we have to make an ``object collection'' here
         ObservableCollection<object> _wikiLanguageList = new ObservableCollection<object>()
@@ -46,7 +46,7 @@ namespace Moegirlpedia
     /// <summary>
     /// Value converter to convert between "English" and "en", etc.
     /// </summary>
-    class ISO639ToCommonLangNameConverter : IValueConverter
+    internal class ISO639ToCommonLangNameConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {

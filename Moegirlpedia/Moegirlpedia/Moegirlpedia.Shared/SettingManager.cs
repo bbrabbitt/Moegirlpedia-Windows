@@ -12,7 +12,7 @@ namespace Moegirlpedia
     /// Currently versioning is not supported. We'll try hard to make backward compatibility.
     /// Versioning will be added when needed.
     /// </summary>
-    class SettingManager
+    internal class SettingManager
     {
         /// <summary>
         /// Set a setting. If the setting does not exsit, create a new setting.
